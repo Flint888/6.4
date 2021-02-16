@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Staff m = new Manager("Менеджер");
+        Manager m = new Manager("Менеджер");
         System.out.println(m.getBonus());
         System.out.println(m.getFixSalary());
         System.out.println(m.getIncome());
@@ -12,7 +12,7 @@ public class Main {
         System.out.println();
         System.out.println();
 
-        Staff q = new Manager("Менеджер1");
+        Manager q = new Manager("Менеджер1");
         System.out.println(q.getBonus());
         System.out.println(q.getFixSalary());
         System.out.println(q.getIncome());
