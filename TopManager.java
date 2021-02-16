@@ -1,16 +1,15 @@
-public class TopManager extends Staff implements Employee{
+public class TopManager extends Staff implements Employee {
 
     public TopManager(String position, double fixSalary) {
 
-        setPosition(position);
-        setFixSalary(fixSalary);
+        super();
+        setBonus((getFixSalary() + (getFixSalary() * 2.5)));
     }
 
     @Override
     public double getMonthSalary() {
-        setFixSalary(150_000);
-        if ( ~~~~ > 10_000_000){
-            setFixSalary((getFixSalary() + (getFixSalary() * 2.5)));
-        }else return getFixSalary();
+        if (getIncome() > 10_000_000) {
+            return getBonus();
+        } else return getFixSalary();
     }
 }

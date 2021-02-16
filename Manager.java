@@ -1,10 +1,13 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Manager extends Staff implements Employee{
 
 
     public Manager(String position, double fixSalary) {
 
-        setPosition(position);
-        setFixSalary(fixSalary);
+        super();
+        setBonus((rnd / 100 * 5) + getFixSalary());
     }
 
     private static final double min = 115_000; // Минимальное число для диапазона
@@ -18,8 +21,6 @@ public class Manager extends Staff implements Employee{
 
     @Override
     public double getMonthSalary() {
-        setFixSalary(100_000);
-        setBonus((rnd / 100 * 5) + getFixSalary());
         return getBonus();
     }
 }

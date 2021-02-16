@@ -2,7 +2,7 @@ import java.util.List;
 
 public abstract class Company {
 
-    public static double incomeCompany = 50_000_000;
+    public static double income;
 
 
     void hire() {
@@ -17,8 +17,13 @@ public abstract class Company {
 
     }
 
-    void getIncome() {
+    double getIncome() {
+        return income;
+    }
 
+    public static void setIncome(Manager manager) {
+        double sum = 0;
+        sum += manager.getBonus();
     }
 
     List<Employee> getTopSalaryStaff(int count) {
