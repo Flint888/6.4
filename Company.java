@@ -21,9 +21,9 @@ public abstract class Company {
         return income;
     }
 
-    public static void setIncome(Manager manager) {
-        double sum = 0;
-        sum += manager.getBonus();
+    public void setIncome(Double d) {
+        income = 0;
+        income += d;
     }
 
     List<Employee> getTopSalaryStaff(int count) {

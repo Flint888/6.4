@@ -28,4 +28,10 @@ public abstract class Staff extends Company{
     public void setBonus(double bonus) {
         this.bonus = bonus;
     }
+
+    @Override
+    public String toString() {
+        return
+                "Должность = " + position ;
+    }
 }
