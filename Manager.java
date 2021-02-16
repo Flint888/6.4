@@ -18,7 +18,6 @@ public class Manager extends Staff implements Employee{
         return (Math.random() * ++max) + min;
     }
 
-
     @Override
     public double getMonthSalary() {
         return getBonus();
