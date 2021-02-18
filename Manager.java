@@ -15,7 +15,7 @@ public class Manager extends Staff implements Employee{
 
     private static final double min = 115_000; // Минимальное число для диапазона
     private static final double max = 140_000; // Максимальное число для диапазона
-    private static double rnd = rnd(min, max);
+    private static final double rnd = rnd(min, max);
 
     public static double rnd(double min, double max) {
         max -= min;

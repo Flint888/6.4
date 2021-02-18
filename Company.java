@@ -2,7 +2,7 @@ import java.util.List;
 
 public abstract class Company {
 
-    public static double income = 0;
+    public static double income;
 
 
     void hire() {
@@ -22,6 +22,7 @@ public abstract class Company {
     }
 
     public void setIncome(Double d) {
+        income = 0;
         income += d;
     }
 
