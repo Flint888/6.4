@@ -1,15 +1,23 @@
-public class TopManager extends Staff implements Employee {
+public class TopManager extends Staff {
+    Company company = new Company();
+    int fixSalaryTopManager = 150_000;
 
-    public TopManager(String position, double fixSalary) {
+    public TopManager(String position) {
+        super(position);
+    }
 
-        super();
-        setBonus((getFixSalary() + (getFixSalary() * 2.5)));
+    private int setMonthSalary() {
+        int topSalaryTopManager = (int) (fixSalaryTopManager + (fixSalaryTopManager * 2.5));
+        if (company.getIncome() > 10_000_000) {
+            return topSalaryTopManager;
+        }
+        return fixSalaryTopManager;
     }
 
     @Override
     public double getMonthSalary() {
-        if (getIncome() > 10_000_000) {
-            return getBonus();
-        } else return getFixSalary();
+        return setMonthSalary();
     }
 }
+
+

@@ -1,36 +1,38 @@
+import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Company {
+public class Company {
 
-    public static double income;
+    private List<Employee> list = new ArrayList<>();
 
+    private static long income = 0;
 
-    void hire() {
-
+    void hire(Employee employee) {
+        list.add(employee);
+        System.out.println(list);
     }
 
-    void hireAll() {
-
+    void hireAll(List<Employee> employees) {
+        list.addAll(employees);
     }
 
-    void fire() {
-
+    void fire(Employee employee) {
+        list.remove(employee);
     }
 
-    double getIncome() {
-        return income;
+    public double getIncome() {
+        return Company.income;
     }
 
-    public void setIncome(Double d) {
-        income = 0;
-        income += d;
+    public void setIncome(int income) {
+        Company.income += income;
     }
 
     List<Employee> getTopSalaryStaff(int count) {
-        return null;
+        return list;
     }
 
     List<Employee> getLowestSalaryStaff(int count) {
-        return null;
+        return list;
     }
 }

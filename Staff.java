@@ -1,9 +1,11 @@
-public abstract class Staff extends Company{
-
+public abstract class Staff implements Employee {
 
     private String position;
     private double fixSalary;
-    private double bonus;
+
+    public Staff(String position) {
+        this.position = position;
+    }
 
     public String getPosition() {
         return position;
@@ -21,17 +23,8 @@ public abstract class Staff extends Company{
         this.fixSalary = fixSalary;
     }
 
-    public double getBonus() {
-        return bonus;
-    }
-
-    public void setBonus(double bonus) {
-        this.bonus = bonus;
-    }
-
     @Override
     public String toString() {
-        return
-                "Должность = " + position ;
+        return "Должность = " + position + " " + getMonthSalary();
     }
 }

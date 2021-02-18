@@ -1,12 +1,13 @@
-public class Operator extends Staff implements Employee {
+public class Operator extends Staff{
 
-    public Operator(String position, double fixSalary) {
+    int operatorFixSalary = 50_000;
 
-        super();
+    public Operator(String position) {
+        super(position);
     }
 
     @Override
     public double getMonthSalary() {
-        return getFixSalary();
+        return operatorFixSalary;
     }
 }

@@ -1,22 +1,17 @@
 public class Main {
     public static void main(String[] args) {
 
+        Company company = new Company();
+        for (int i = 0; i < 85; i++) {
+            company.hire(new Manager("Менеджер"));
+        }
 
-        Staff m = new Manager("Менеджер");
-        System.out.println(m.getBonus());
-        System.out.println(m.getFixSalary());
-        System.out.println(m.getIncome());
-//        System.out.println(m.);
-        System.out.println(m.getPosition());
+        for (int i = 0; i < 3; i++) {
+            company.hire(new Operator("Оператор"));
+        }
 
-        System.out.println();
-        System.out.println();
-
-        Staff q = new Manager("Менеджер1");
-        System.out.println(q.getBonus());
-        System.out.println(q.getFixSalary());
-        System.out.println(q.getIncome());
-        System.out.println(q.getPosition());
-
+        for (int i = 0; i < 3; i++) {
+            company.hire(new TopManager("ТопМенеджер"));
+        }
     }
 }
